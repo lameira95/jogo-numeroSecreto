@@ -3,11 +3,11 @@ let titulo = document.querySelector('h1');
 titulo.innerHTML = 'Jogo do número secreto';
 
 let paragrafo = document.querySelector('p');
-paragrafo.innerHTML = 'Escolha um número de 1 a 10';
+paragrafo.innerHTML = 'Escolha um número de 1 a 100';
 
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
-
+let numeroLimite = 100;
 function exebirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
@@ -45,10 +45,10 @@ function verificarChute() {
     }
 }
 function gerarNumeroAleatorio() {
-    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
     let quantidadeDeElementosNaLista = listasNumerosSorteados.length;
 
-    if (quantidadeDeElementosNaLista == 10){
+    if (quantidadeDeElementosNaLista == 100){
         listasNumerosSorteados = []
     }
     if (listasNumerosSorteados.includes(numeroEscolhido)) {
