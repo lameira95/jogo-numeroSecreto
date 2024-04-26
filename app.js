@@ -4,7 +4,7 @@ titulo.innerHTML = 'Jogo do número secreto';
 
 
 
-let numeroLimite = 100;
+let numeroLimite = 50;
 
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
@@ -16,7 +16,7 @@ function exebirTextoNaTela(tag, texto) {
 }
 function exibirMensagemInicial() {
     exebirTextoNaTela('h1', 'Jogo do número secreto');
-    exebirTextoNaTela('p', 'Escolha um número de 1 a 100');
+    exebirTextoNaTela('p', 'Escolha um número de 1 a 50');
     
 }
 
